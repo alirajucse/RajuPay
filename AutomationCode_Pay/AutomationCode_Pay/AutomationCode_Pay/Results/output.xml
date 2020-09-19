@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.7.8 on win32)" generated="20200919 22:16:14.574" rpa="false">
+<suite id="s1" name="TestSuite" source="D:\RajuPay\Pay\TestSuite">
+<suite id="s1-s1" name="TestCases" source="D:\RajuPay\Pay\TestSuite\TestCases.robot">
+<test id="s1-s1-t1" name="TestCase1-Landing the application home page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${Url}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20200919 22:16:14.785" level="INFO">Opening browser 'chrome' to base url 'http://localhost:9999/statements'.</msg>
+<status status="PASS" starttime="20200919 22:16:14.785" endtime="20200919 22:16:20.167"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20200919 22:16:20.167" endtime="20200919 22:16:20.169"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200919 22:16:20.169" endtime="20200919 22:16:22.288"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" starttime="20200919 22:16:14.784" endtime="20200919 22:16:22.288" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="TestCase2-Clear Textbox and refresh the page">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>search_account_id</arg>
+</arguments>
+<status status="PASS" starttime="20200919 22:16:22.290" endtime="20200919 22:16:22.353"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>from_date</arg>
+</arguments>
+<status status="PASS" starttime="20200919 22:16:22.354" endtime="20200919 22:16:22.415"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>to_date</arg>
+</arguments>
+<status status="PASS" starttime="20200919 22:16:22.416" endtime="20200919 22:16:22.467"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>Search</arg>
+</arguments>
+<msg timestamp="20200919 22:16:22.468" level="INFO">Clicking button 'Search'.</msg>
+<status status="PASS" starttime="20200919 22:16:22.467" endtime="20200919 22:16:32.786"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" starttime="20200919 22:16:22.290" endtime="20200919 22:16:32.786" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="TestCase3-Check balancce before and balance after value an initial phase">
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>/html/body/div/div[1]</arg>
+<arg>${amount1}</arg>
+</arguments>
+<msg timestamp="20200919 22:16:32.791" level="FAIL">'/html/body/div/div[1]' does not contain 'Balance before: 0.00 EUR'</msg>
+<status status="FAIL" starttime="20200919 22:16:32.791" endtime="20200919 22:16:32.792"></status>
+</kw>
+<tags>
+<tag>Fuctional</tag>
+</tags>
+<status status="FAIL" starttime="20200919 22:16:32.789" endtime="20200919 22:16:32.793" critical="yes">'/html/body/div/div[1]' does not contain 'Balance before: 0.00 EUR'</status>
+</test>
+<test id="s1-s1-t4" name="TestCase4-Specific client Nur initial turnover Test">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>search_account_id</arg>
+</arguments>
+<status status="PASS" starttime="20200919 22:16:32.798" endtime="20200919 22:16:32.835"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>from_date</arg>
+</arguments>
+<status status="PASS" starttime="20200919 22:16:32.835" endtime="20200919 22:16:32.869"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>to_date</arg>
+</arguments>
+<status status="PASS" starttime="20200919 22:16:32.869" endtime="20200919 22:16:32.902"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>Search</arg>
+</arguments>
+<msg timestamp="20200919 22:16:32.902" level="INFO">Clicking button 'Search'.</msg>
+<status status="PASS" starttime="20200919 22:16:32.902" endtime="20200919 22:16:43.151"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>search_account_id</arg>
+<arg>Nur</arg>
+</arguments>
+<msg timestamp="20200919 22:16:43.152" level="INFO">Typing text 'Nur' into text field 'search_account_id'.</msg>
+<status status="PASS" starttime="20200919 22:16:43.152" endtime="20200919 22:16:43.249"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>from_date</arg>
+<arg>2020-09-01 00:00:00</arg>
+</arguments>
+<msg timestamp="20200919 22:16:43.250" level="INFO">Typing text '2020-09-01 00:00:00' into text field 'from_date'.</msg>
+<status status="PASS" starttime="20200919 22:16:43.250" endtime="20200919 22:16:43.361"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>to_date</arg>
+<arg>2020-09-06 00:00:00</arg>
+</arguments>
+<msg timestamp="20200919 22:16:43.361" level="INFO">Typing text '2020-09-06 00:00:00' into text field 'to_date'.</msg>
+<status status="PASS" starttime="20200919 22:16:43.361" endtime="20200919 22:16:43.470"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>/html/body/div/div[1]</arg>
+<arg>${amount1}</arg>
+</arguments>
+<msg timestamp="20200919 22:16:43.471" level="FAIL">'/html/body/div/div[1]' does not contain 'Balance before: 0.00 EUR'</msg>
+<status status="FAIL" starttime="20200919 22:16:43.470" endtime="20200919 22:16:43.471"></status>
+</kw>
+<tags>
+<tag>Fuctional</tag>
+</tags>
+<status status="FAIL" starttime="20200919 22:16:32.795" endtime="20200919 22:16:43.471" critical="yes">'/html/body/div/div[1]' does not contain 'Balance before: 0.00 EUR'</status>
+</test>
+<test id="s1-s1-t5" name="TestCase5-Specific client Nur turnover Test after 1st transaction">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>search_account_id</arg>
+</arguments>
+<status status="PASS" starttime="20200919 22:16:43.473" endtime="20200919 22:16:43.504"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>from_date</arg>
+</arguments>
+<status status="PASS" starttime="20200919 22:16:43.505" endtime="20200919 22:16:43.528"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>to_date</arg>
+</arguments>
+<status status="PASS" starttime="20200919 22:16:43.528" endtime="20200919 22:16:43.560"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>Search</arg>
+</arguments>
+<msg timestamp="20200919 22:16:43.561" level="INFO">Clicking button 'Search'.</msg>
+<status status="PASS" starttime="20200919 22:16:43.561" endtime="20200919 22:16:53.869"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>search_account_id</arg>
+<arg>Nur</arg>
+</arguments>
+<msg timestamp="20200919 22:16:53.871" level="INFO">Typing text 'Nur' into text field 'search_account_id'.</msg>
+<status status="PASS" starttime="20200919 22:16:53.871" endtime="20200919 22:16:53.958"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>from_date</arg>
+<arg>2020-09-07 00:00:00</arg>
+</arguments>
+<msg timestamp="20200919 22:16:53.959" level="INFO">Typing text '2020-09-07 00:00:00' into text field 'from_date'.</msg>
+<status status="PASS" starttime="20200919 22:16:53.959" endtime="20200919 22:16:54.071"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>to_date</arg>
+<arg>2020-09-09 09:20:20</arg>
+</arguments>
+<msg timestamp="20200919 22:16:54.072" level="INFO">Typing text '2020-09-09 09:20:20' into text field 'to_date'.</msg>
+<status status="PASS" starttime="20200919 22:16:54.072" endtime="20200919 22:16:54.173"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>Search</arg>
+</arguments>
+<msg timestamp="20200919 22:16:54.174" level="INFO">Clicking button 'Search'.</msg>
+<status status="PASS" starttime="20200919 22:16:54.174" endtime="20200919 22:17:04.478"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>/html/body/div/div[1]</arg>
+<arg>${amount3}</arg>
+</arguments>
+<msg timestamp="20200919 22:17:04.480" level="FAIL">'/html/body/div/div[1]' does not contain 'Balance before: 0.00 EUR'</msg>
+<status status="FAIL" starttime="20200919 22:17:04.479" endtime="20200919 22:17:04.481"></status>
+</kw>
+<tags>
+<tag>Fuctional</tag>
+</tags>
+<status status="FAIL" starttime="20200919 22:16:43.472" endtime="20200919 22:17:04.482" critical="yes">'/html/body/div/div[1]' does not contain 'Balance before: 0.00 EUR'</status>
+</test>
+<test id="s1-s1-t6" name="TestCase6-Specific client Nur turnover Test after 2nd transaction">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>search_account_id</arg>
+</arguments>
+<status status="PASS" starttime="20200919 22:17:04.485" endtime="20200919 22:17:04.529"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>from_date</arg>
+</arguments>
+<status status="PASS" starttime="20200919 22:17:04.530" endtime="20200919 22:17:04.566"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>to_date</arg>
+</arguments>
+<status status="PASS" starttime="20200919 22:17:04.566" endtime="20200919 22:17:04.606"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>Search</arg>
+</arguments>
+<msg timestamp="20200919 22:17:04.607" level="INFO">Clicking button 'Search'.</msg>
+<status status="PASS" starttime="20200919 22:17:04.607" endtime="20200919 22:17:14.901"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>search_account_id</arg>
+<arg>Nur</arg>
+</arguments>
+<msg timestamp="20200919 22:17:14.902" level="INFO">Typing text 'Nur' into text field 'search_account_id'.</msg>
+<status status="PASS" starttime="20200919 22:17:14.901" endtime="20200919 22:17:14.973"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>from_date</arg>
+<arg>2020-09-08 00:00:00</arg>
+</arguments>
+<msg timestamp="20200919 22:17:14.973" level="INFO">Typing text '2020-09-08 00:00:00' into text field 'from_date'.</msg>
+<status status="PASS" starttime="20200919 22:17:14.973" endtime="20200919 22:17:15.045"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>to_date</arg>
+<arg>2020-09-09 09:40:20</arg>
+</arguments>
+<msg timestamp="20200919 22:17:15.046" level="INFO">Typing text '2020-09-09 09:40:20' into text field 'to_date'.</msg>
+<status status="PASS" starttime="20200919 22:17:15.046" endtime="20200919 22:17:15.119"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>Search</arg>
+</arguments>
+<msg timestamp="20200919 22:17:15.119" level="INFO">Clicking button 'Search'.</msg>
+<status status="PASS" starttime="20200919 22:17:15.119" endtime="20200919 22:17:25.331"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>/html/body/div/div[1]</arg>
+<arg>${amount5}</arg>
+</arguments>
+<msg timestamp="20200919 22:17:25.332" level="FAIL">'/html/body/div/div[1]' does not contain 'Balance before: 500.00 EUR'</msg>
+<status status="FAIL" starttime="20200919 22:17:25.332" endtime="20200919 22:17:25.333"></status>
+</kw>
+<tags>
+<tag>Fuctional</tag>
+</tags>
+<status status="FAIL" starttime="20200919 22:17:04.484" endtime="20200919 22:17:25.334" critical="yes">'/html/body/div/div[1]' does not contain 'Balance before: 500.00 EUR'</status>
+</test>
+<test id="s1-s1-t7" name="TestCase7-Specific client Nur turnover Test after 3rd transaction">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>search_account_id</arg>
+</arguments>
+<status status="PASS" starttime="20200919 22:17:25.336" endtime="20200919 22:17:25.374"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>from_date</arg>
+</arguments>
+<status status="PASS" starttime="20200919 22:17:25.375" endtime="20200919 22:17:25.410"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>to_date</arg>
+</arguments>
+<status status="PASS" starttime="20200919 22:17:25.410" endtime="20200919 22:17:25.448"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>Search</arg>
+</arguments>
+<msg timestamp="20200919 22:17:25.449" level="INFO">Clicking button 'Search'.</msg>
+<status status="PASS" starttime="20200919 22:17:25.449" endtime="20200919 22:17:35.699"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>search_account_id</arg>
+<arg>Nur</arg>
+</arguments>
+<msg timestamp="20200919 22:17:35.700" level="INFO">Typing text 'Nur' into text field 'search_account_id'.</msg>
+<status status="PASS" starttime="20200919 22:17:35.700" endtime="20200919 22:17:35.777"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>from_date</arg>
+<arg>2020-09-10 00:00:00</arg>
+</arguments>
+<msg timestamp="20200919 22:17:35.779" level="INFO">Typing text '2020-09-10 00:00:00' into text field 'from_date'.</msg>
+<status status="PASS" starttime="20200919 22:17:35.778" endtime="20200919 22:17:35.878"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>to_date</arg>
+<arg>2020-09-13 09:20:20</arg>
+</arguments>
+<msg timestamp="20200919 22:17:35.879" level="INFO">Typing text '2020-09-13 09:20:20' into text field 'to_date'.</msg>
+<status status="PASS" starttime="20200919 22:17:35.878" endtime="20200919 22:17:35.974"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>Search</arg>
+</arguments>
+<msg timestamp="20200919 22:17:35.975" level="INFO">Clicking button 'Search'.</msg>
+<status status="PASS" starttime="20200919 22:17:35.975" endtime="20200919 22:17:46.239"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>/html/body/div/div[1]</arg>
+<arg>${amount5}</arg>
+</arguments>
+<msg timestamp="20200919 22:17:46.240" level="FAIL">'/html/body/div/div[1]' does not contain 'Balance before: 500.00 EUR'</msg>
+<status status="FAIL" starttime="20200919 22:17:46.240" endtime="20200919 22:17:46.241"></status>
+</kw>
+<status status="FAIL" starttime="20200919 22:17:25.336" endtime="20200919 22:17:46.242" critical="yes">'/html/body/div/div[1]' does not contain 'Balance before: 500.00 EUR'</status>
+</test>
+<doc>This is Test Suite for Pay</doc>
+<status status="FAIL" starttime="20200919 22:16:14.607" endtime="20200919 22:17:46.244"></status>
+</suite>
+<status status="FAIL" starttime="20200919 22:16:14.576" endtime="20200919 22:17:46.254"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="5">Critical Tests</stat>
+<stat pass="2" fail="5">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="4">Fuctional</stat>
+<stat pass="2" fail="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="2" fail="5" id="s1" name="TestSuite">TestSuite</stat>
+<stat pass="2" fail="5" id="s1-s1" name="TestCases">TestSuite.TestCases</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200919 22:16:14.568" level="ERROR">Error in file 'D:\RajuPay\Pay\TestSuite\TestCases.robot' on line 32: Setting 'Tags' is allowed only once. Only the first value is used.</msg>
+</errors>
+</robot>
